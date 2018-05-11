@@ -1,0 +1,290 @@
+
+.pam-bg-img {
+  background-image: url('/assets/images/pam/inv-icons.svg');
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  filter: brightness(2.5);
+}
+
+// vendor-slider
+.vendor-slider {
+  padding: 15px;
+  background-color: #7dcced;
+  background: #02AAB0;
+  background: -webkit-linear-gradient(to left, #02AAB0, #00CDAC);
+  background: linear-gradient(to left, #02AAB0, #00CDAC);
+  .vendor-slider_title {
+    color: #fff;
+  }
+  .signup-btn {
+    min-width: 200px;
+    border-radius: 50px;
+    font-size: 16px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+  }
+  #myCarousel {
+    .carousel-indicators {
+      bottom: auto;
+      padding-top: 20px;
+      padding-bottom: 10px;
+      position: static;
+      margin-left: 0;
+      width: 100%;
+    }
+    .carousel-inner {
+      @include media(500px) {
+        height: 330px;
+        overflow: hidden;
+      }
+      .item {
+        img {
+          @include media(500px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Signup form
+// Pam-vendor
+.pam-vendor-login-box_big {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pam-vendor-login-box {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #fff;
+  @include box-shadow(0, 1px, 2px, rgba(0, 0, 0, 0.2));
+  @include media(767px) {
+    padding: 15px;
+  }
+}
+
+.pam-login-tabs {
+  max-width: 400px;
+  margin: 20px auto;
+  background-color: #fff;
+  @include box-shadow(0, 1px, 2px, rgba(0, 0, 0, 0.2));
+  .nav-tabs {
+    background-color: #fff;
+    li {
+      width: 50%;
+      a {
+        text-align: center;
+        padding: 15px;
+        font-size: 16px;
+      }
+      &:first-child {
+        border-right: 1px solid #eee;
+      }
+    }
+  }
+  .tab-pane {
+    padding: 0;
+  }
+  .login-form {
+    margin-top: 0;
+    border-top: 0;
+  }
+}
+
+.pam-vendor-signup {
+  max-width: 800px;
+  margin: 0 auto;
+  .pam-vendor-signup-box {
+    margin: 20px auto;
+    background: #fff;
+    @include box-shadow(0, 1px, 2px, rgba(0, 0, 0, 0.2));
+  }
+  .pam-vendor-signup-box-content {
+    padding: 30px;
+    @include media(767px) {
+      padding: 15px;
+    }
+  }
+
+  .pam-vendor-signup-box .nav-tabs {
+    position: relative;
+    margin: 40px auto;
+    margin-bottom: 0;
+    border-bottom-color: #e0e0e0;
+  }
+
+  .pam-vendor-signup-box > div.pam-vendor-signup-box-inner {
+    position: relative;
+  }
+
+  .connecting-line {
+    height: 2px;
+    background: #e0e0e0;
+    position: absolute;
+    width: 80%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    z-index: 1;
+  }
+
+  .pam-vendor-signup-box .nav-tabs > li.active > a,
+  .pam-vendor-signup-box .nav-tabs > li.active > a:hover,
+  .pam-vendor-signup-box .nav-tabs > li.active > a:focus {
+    color: #555555;
+    cursor: default;
+    border: 0;
+    border-bottom-color: transparent;
+  }
+
+  span.round-tab {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: inline-block;
+    border-radius: 100px;
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    font-size: 25px;
+  }
+  span.round-tab i {
+    color: #555555;
+  }
+  .pam-vendor-signup-box li.active span.round-tab {
+    background: #fff;
+    border: 2px solid #5bc0de;
+
+  }
+  .pam-vendor-signup-box li.active span.round-tab i {
+    color: #5bc0de;
+  }
+
+  span.round-tab:hover {
+    color: #333;
+    border: 2px solid #333;
+  }
+
+  .pam-vendor-signup-box .nav-tabs > li {
+    width: 25%;
+  }
+
+  .pam-vendor-signup-box li:after {
+    content: " ";
+    position: absolute;
+    left: 46%;
+    opacity: 0;
+    margin: 0 auto;
+    bottom: 0;
+    border: 5px solid transparent;
+    border-bottom-color: #5bc0de;
+    transition: 0.1s ease-in-out;
+    display: none;
+  }
+
+  .pam-vendor-signup-box li.active:after {
+    content: " ";
+    position: absolute;
+    left: 46%;
+    opacity: 1;
+    margin: 0 auto;
+    bottom: 0px;
+    border: 10px solid transparent;
+    border-bottom-color: #5bc0de;
+    display: none;
+  }
+
+  .pam-vendor-signup-box .nav-tabs > li a {
+    width: 50px;
+    height: 50px;
+    margin: 20px auto;
+    border-radius: 100%;
+    padding: 0;
+  }
+
+  .pam-vendor-signup-box .nav-tabs > li a:hover {
+    background: transparent;
+  }
+
+  .pam-vendor-signup-box .tab-pane {
+    position: relative;
+  }
+
+  .pam-vendor-signup-box h3 {
+    margin-top: 0;
+  }
+
+  @media(max-width: 767px) {
+
+    .pam-vendor-signup-box {
+      width: 95%;
+      height: auto !important;
+    }
+
+    span.round-tab {
+      font-size: 16px;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+    }
+
+    .pam-vendor-signup-box .nav-tabs > li a {
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+    }
+
+    .pam-vendor-signup-box li.active:after {
+      content: " ";
+      position: absolute;
+      left: 35%;
+    }
+  }
+}
+
+.add-property-section {
+  margin-bottom: 15px;
+}
+
+.added-property-section {
+  margin-bottom: 15px;
+  border: 1px solid #eee;
+  min-height: 539px;
+}
+
+.add-property-box {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  color: #333;
+  display: block;
+  background-color: #fff;
+  @include box-shadow(0, 1px, 2px, rgba(0, 0, 0, 0.2));
+}
+
+.added-property-box {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  color: #333;
+  display: block;
+  background-color: #f9f9f9;
+}
+
+.agreement {
+  height: 400px;
+  overflow-y: auto;
+  border: 1px solid #f5f5f5;
+  padding: 15px;
+  margin-bottom: 15px;
+}

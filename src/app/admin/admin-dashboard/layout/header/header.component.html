@@ -1,0 +1,43 @@
+<header class="main-header">
+  <a routerLink="/" class="logo">
+    <span class="logo-mini">
+      <img src="/assets/images/logo/hl.png" width="50" alt="Happylocate Logo">
+    </span>
+    <span class="logo-lg">
+      <img src="/assets/images/logo/logo.svg" width="150" alt="Happylocate Logo">
+    </span>
+  </a>
+
+  <!-- Header Navbar -->
+  <nav class="navbar navbar-static-top" role="navigation">
+    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </a>
+    <div class="navbar-custom-menu">
+      <ul class="nav navbar-nav">
+        <!-- User Account Menu -->
+        <li class="dropdown user user-menu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <img src="/assets/images/default/profile-picture.jpg" class="user-image" alt="Profile picture">
+            <span class="hidden-xs">User <i class="fa fa-caret-down"></i></span>
+          </a>
+          <ul class="dropdown-menu only-profile">
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+              <a routerLink="/hl-admin/profile"> <i class="fa fa-user drop-icon"></i> Profile</a>
+            </li>
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+              <a routerLink="/hl-admin/settings"><i class="fa fa-gear drop-icon"></i> Settings</a>
+            </li>
+            <li role="separator" class="divider"></li>
+            <li>
+              <a class="cursor-pointer"><i class="fa fa-sign-out drop-icon"></i> Logout</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

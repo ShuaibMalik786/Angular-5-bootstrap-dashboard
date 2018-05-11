@@ -1,0 +1,75 @@
+// Dark layers
+.dl {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.dark-layer-1 {
+  @extend .dl;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.dark-layer-2 {
+  @extend .dl;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.dark-layer-3 {
+  @extend .dl;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.dark-layer-4 {
+  @extend .dl;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.dark-layer-5 {
+  @extend .dl;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dark-layer-6 {
+  @extend .dl;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.dark-layer-7 {
+  @extend .dl;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.dark-layer-8 {
+  @extend .dl;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dark-layer-9 {
+  @extend .dl;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.dark-layer {
+  @extend .dl;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.dark-filter {
+  position: relative;
+  &:after {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    left: 0;
+    top: 0;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .container, .container-fluid {
+    z-index: 2;
+    position: relative;
+  }
+}

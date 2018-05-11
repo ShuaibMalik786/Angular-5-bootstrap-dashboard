@@ -1,0 +1,123 @@
+
+
+<section class="content-header">
+    <h1>Edit User</h1>
+</section>  
+
+<section class="content">
+    <div class="row">
+        <div class="col-md-6">
+	        <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">Edit Details</h3>
+                </div>
+				<div class="box-body">
+					<div class="form-horizontal">
+						<div class="form-group">
+                            <label class="col-sm-3 control-label">Name</label>
+
+                            <div class="col-sm-9">
+                                <input type="email" class="form-control" placeholder="" value="john">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Username</label>
+
+                            <div class="col-sm-9">
+                                <input type="email" class="form-control" placeholder="" value="john@gmail.com">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Phone</label>
+
+                            <div class="col-sm-9">
+                                <input type="email" class="form-control" placeholder="" value="8452365214">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Status</label>
+
+                            <div class="col-sm-9">
+                                <div class="hl-select-arrow-outline">
+                                    <select class="hl-input-select">
+                                        <option value="">Active</option>
+                                        <option value="">Disable</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Roles</label>
+
+                            <div class="col-sm-9">
+                                <select class="user-roles form-control" id="id_label_multiple" multiple="multiple">
+                                    <option value="">Loading Manager</option>
+                                    <option value="">Unloading Manager</option>
+                                    <option value="">Surveyour</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Image</label>
+
+                            <div class="col-sm-9">
+                                <div class="image-upload-box">
+                                    <div class="input-group">
+                                        <input id="fakeUploadLogo" class="form-control fake-shadow" placeholder="File Name" disabled="disabled">
+                                        <div class="input-group-btn">
+                                            <div class="fileUpload btn btn-danger fake-shadow">
+                                                <span>Choose</span>
+                                                <input id="logo-id" name="logo" type="file" class="attachment_upload">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="help-block">Upload JPG/PNG file of less than 2MB size</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label"></label>
+
+                            <div class="col-sm-9">
+                                <button class="btn btn-hl">Update User Details</button>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+        <div class="col-md-6">
+            <div class="box">
+                <div class="box-header">
+                    <h4 class="box-title">Edit Password</h4>
+                </div>
+                <div class="box-body">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Password</label>
+
+                            <div class="col-sm-9">
+                                <input type="password" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Confirm Password</label>
+
+                            <div class="col-sm-9">
+                                <input type="password" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label"></label>
+
+                            <div class="col-sm-9">
+                                <button class="btn btn-hl">Update User Password</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	</div>
+</section>

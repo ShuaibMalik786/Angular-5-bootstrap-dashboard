@@ -1,0 +1,163 @@
+.rating {
+  border: none;
+  float: left;
+}
+
+.rating > input {
+  display: none;
+}
+
+.rating > label:before {
+  margin: 5px;
+  font-size: 20px;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating-lg > label:before {
+  font-size: 24px;
+}
+
+.rating-2x > label:before {
+  font-size: 28px;
+}
+
+.rating-3x > label:before {
+  font-size: 32px;
+}
+
+.rating-4x > label:before {
+  font-size: 36px;
+}
+
+.rating-5x > label:before {
+  font-size: 40px;
+}
+
+.rating > .half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label {
+  color: #ddd;
+  float: right;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label {
+  color: #FFD700;
+}
+
+/* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label {
+  color: #FFED85;
+}
+
+.empty-stars {
+  background: url('/assets/images/star/fa-star-o.svg') top left repeat-x;
+  background-size: contain;
+  left: -1px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  top: 1px;
+}
+
+.five-star.empty-stars {
+  background: url('/assets/images/star/fa-star-o.svg');
+  background-size: contain;
+  height: 13px;
+  width: 85px;
+}
+
+.current-star {
+  background: url('/assets/images/star/fa-star.svg') left bottom repeat-x;
+  background-size: contain;
+  display: block;
+  position: absolute;
+}
+
+.five-star .current-star {
+  background: url('/assets/images/star/fa-star.svg') left bottom;
+  background-size: contain;
+  height: 13px;
+}
+
+// vendor star rating
+.vendor-star-rating {
+  .dropdown-toggle {
+    background: transparent !important;
+    border: none;
+    outline: none;
+    display: block;
+    margin: 15px auto 0 auto;
+  }
+  .caret {
+    margin-top: -5px;
+  }
+}
+
+.vendor-star-progress-box {
+  width: 240px;
+  font-size: 12px;
+  border: none;
+  padding: 10px 5px;
+  box-shadow: 0 1px 12px rgba(0, 0, 0, .175);
+  left: 50%;
+  transform: translateX(-50%);
+  @include media(350px) {
+    width: 100%;
+  }
+  &:before {
+    content: '';
+    display: inline-block;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #999;
+    border-top: 0;
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: -7px;
+    left: 116px;
+  }
+  &:after {
+    content: '';
+    display: inline-block;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #fff;
+    border-top: 0;
+    position: absolute;
+    top: -6px;
+    left: 117px;
+  }
+  .vendor-star-progress {
+    width: 90%;
+    margin: 0 auto;
+    .vendor-star-progress_star {
+      width: 30px;
+    }
+    .vendor-star-progress_bar {
+      width: calc(90% - 60px);
+      padding-left: 6px;
+      padding-right: 6px;
+      .progress {
+        height: 7px;
+        margin: 7px 0;
+      }
+    }
+    .vendor-star-progress_percent {
+      width: 30px;
+    }
+  }
+}

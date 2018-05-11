@@ -1,0 +1,69 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>Support Requests</h1>
+</section>
+
+<section class="content">
+  <div class="box">
+    <div class="box-header">
+      <h3 class="box-title">All Requests</h3>
+    </div>
+    <div class="box-body">
+
+      <div class="table-header-pagination">
+        <app-table-pagination
+          [metaData]="paginationMeta"
+          [params]="httpParams"
+          [simple]="true"
+          (onPageChanged)="onUpdateParams($event)"></app-table-pagination>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped data-table">
+          <thead>
+          <tr [appTableSortable]="httpParams" (onSortChanged)="onUpdateParams($event)">
+            <th data-sort="id">Request ID</th>
+            <th data-sort="name">Name</th>
+            <th data-sort="category_id">Category</th>
+            <th data-sort="attachment">Attachment</th>
+            <th data-sort="created_at">Submitted Date</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr appTableLoading *ngIf="loading"></tr>
+          <tr appTableNoData *ngIf="!loading && supportRequests.length === 0"></tr>
+          <ng-template [ngIf]="!loading">
+            <tr *ngFor="let request of supportRequests">
+              <td>{{ request.id }}</td>
+              <td>{{ request.name }}</td>
+              <td>{{ request.category }}</td>
+              <td class="text-center">
+                <i class="fa fa-lg"
+                   [ngClass]="request.attachment ? 'fa-check-circle green-text': 'fa-times-circle red-text'"></i>
+              </td>
+              <td>{{ request.created_at}}</td>
+              <td class="text-center">
+                <a [routerLink]="['./', request.id]"
+                   data-toggle="tooltip"
+                   title="View Request"
+                   class="btn-round btn-primary">
+                  <i class="fa fa-eye"></i>
+                </a>
+              </td>
+            </tr>
+          </ng-template>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-footer">
+        <app-table-pagination
+          [metaData]="paginationMeta"
+          [params]="httpParams"
+          (onPageChanged)="onUpdateParams($event)"></app-table-pagination>
+      </div>
+
+    </div>
+  </div>
+</section>

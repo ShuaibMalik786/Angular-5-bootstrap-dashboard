@@ -1,0 +1,15 @@
+$notie-color-error: #E04040;
+$notie-z-index: 2147483647;
+
+// Packages css
+@import "~notie/src/notie.scss";
+@import "~magnific-popup/src/css/main.scss";
+
+@import "~select2/dist/css/select2.min.css";
+@import "~sweetalert2/dist/sweetalert2.min.css";
+@import "~ng2-toastr/bundles/ng2-toastr.min.css";
+@import "~bootstrap-datepicker/dist/css/bootstrap-datepicker3.standalone.min.css";
+@import "~bootstrap-slider/dist/css/bootstrap-slider.min.css";
+@import "~nouislider/distribute/nouislider.min.css";
+
+@import "../../sass/style";

@@ -1,0 +1,260 @@
+// Core variables and mixins
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+// Reset and dependencies
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/normalize";
+// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/print";
+// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/glyphicons";
+// Core CSS
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
+// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/type";
+// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/code";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tables";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/forms";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+// Components
+// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/component-animations";
+// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/dropdowns";
+// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/button-groups";
+// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/input-groups";
+// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navs";
+// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navbar";
+// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/breadcrumbs";
+// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/pagination";
+// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/pager";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/labels";
+// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/badges";
+// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/jumbotron";
+// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/thumbnails";
+// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/alerts";
+// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/progress-bars";
+// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/media";
+// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/list-group";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/panels";
+// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-embed";
+// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/wells";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/close";
+// Components w/ JavaScript
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/modals";
+// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tooltip";
+// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/popovers";
+// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/carousel";
+// Utility classes
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/utilities";
+// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
+// Common
+@import 'common/mixins';
+// Variables
+@import 'common/variables';
+// Forms
+@import 'common/forms';
+// Modal
+@import 'common/styles/modal';
+
+$theme-color: #1ab7c8;
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  font-size: 14px;
+  color: rgba(0, 0, 0, .7);
+  margin: 0 auto;
+  max-width: 1920px;
+  width: 100%;
+}
+
+// button
+.btn {
+  cursor: pointer;
+  border-radius: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none !important;
+  border: 1px solid transparent !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+  @include transition(0.2s ease-out);
+  &.disabled {
+    pointer-events: none;
+  }
+}
+
+.btn.btn-hl {
+  background-color: $theme-color;
+  color: #fff;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: darken($theme-color, 5);
+    color: #fff;
+  }
+}
+
+.form-control {
+  border-radius: 0px;
+  padding: 6px 15px !important;
+  border: 1px solid #ccc;
+  box-shadow: none;
+  &:focus {
+    border-color: #3c8dbc;
+    box-shadow: none;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.grey-link {
+  color: #555;
+}
+
+.card {
+  padding: 15px;
+  background-color: #fff;
+  @include box-shadow(0,
+          1px,
+          2px,
+          rgba(0, 0, 0, 0.2));
+  &.card-0 {
+    padding: 0;
+  }
+}
+
+.w100 {
+  max-width: 100px;
+}
+
+.w800 {
+  max-width: 800px;
+}
+
+.auto {
+  margin: 0 auto;
+  display: block;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.m-t-10 {
+  margin-top: 10px;
+}
+
+.m-t-30 {
+  margin-top: 30px;
+}
+
+.m-b-5 {
+  margin-bottom: 5px;
+}
+
+.m-b-30 {
+  margin-bottom: 30px;
+}
+
+.m-t-40 {
+  margin-top: 40px;
+}
+
+.a-dark {
+  color: #333 !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.hr-line {
+  height: 1px;
+  border-top: 1px solid #ddd;
+  margin: 15px 0;
+}
+
+// label{
+// 	font-size:14px;
+// 	font-weight: normal;
+// }
+
+.float-50 {
+  float: left;
+  width: 50%;
+  @include media(767px) {
+    float: none;
+    width: 100%;
+  }
+}
+
+.ar-btn {
+  width: 150px;
+  margin-bottom: 10px;
+  @include media(767px) {
+    width: auto;
+  }
+}
+
+.clearFloat {
+  clear: both;
+}
+
+hr.dark-line {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-color: #ddd;
+}
+
+.alert-box {
+  text-align: center;
+  .alert-box_icon {
+    margin: 20px 0;
+    .circle-icon {
+      height: 80px;
+      width: 80px;
+      border-radius: 100%;
+      border: 1px solid #ccc;
+      margin: 0 auto;
+      position: relative;
+    }
+    span {
+      color: #888;
+      font-size: 40px;
+    }
+    .circle-icon.circle-icon_success {
+      background: url('/images/status-icons/success.svg');
+      background-size: 30px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .circle-icon.circle-icon_danger {
+      background: url('/images/status-icons/failed.svg');
+      background-size: 30px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .circle-icon.circle-icon_warning {
+      background: url('/images/status-icons/pending.svg');
+      background-size: 30px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  .alert-box_main-text {
+    margin: 20px 0;
+    font-size: 24px;
+  }
+  .alert-box_sub-text {
+    margin: 10px 0;
+  }
+  .alert-box_footer {
+    padding: 15px;
+    .btn {
+      min-width: 100px;
+    }
+  }
+}

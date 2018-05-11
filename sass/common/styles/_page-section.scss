@@ -1,0 +1,27 @@
+.page-section {
+  padding: 10px 15px 10px 15px;
+  margin: 10px 0;
+  .page-section_header {
+    font-size: 24px;
+    padding-bottom: 25px;
+    font-weight: 400;
+    &:after {
+      content: "";
+      border-bottom: 2px solid $theme-color;
+      width: 50px;
+      margin-top: 10px;
+      display: block;
+    }
+  }
+  .page-section_sub-header {
+    font-size: 18px;
+    padding-bottom: 10px;
+    font-weight: 400;
+  }
+  .page-section_content {
+    margin-bottom: 25px;
+    i {
+      padding-right: 5px;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+// positions
+.relative {
+  position: relative !important;
+}
+
+.absolute {
+  position: absolute !important;
+}
+
+.fixed {
+  position: fixed !important;
+}
+
+.static {
+  position: static !important;
+}
+
+// Centering elements
+.center-it {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center-it-x {
+  position: absolute;
+  top: 50%;
+  transform: translate-x(-50%);
+}
+
+.center-it-y {
+  position: absolute;
+  left: 50%;
+  transform: translate-y(-50%);
+}
+
+.center-img {
+  display: block !important;
+  margin: 0 auto !important;
+}

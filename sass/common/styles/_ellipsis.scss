@@ -1,0 +1,30 @@
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ellipsis100 {
+  @extend .ellipsis;
+  width: 100px;
+}
+
+.ellipsis200 {
+  @extend .ellipsis;
+  width: 200px;
+}
+
+.ellipsis300 {
+  @extend .ellipsis;
+  width: 300px;
+}
+
+.ellipsis400 {
+  @extend .ellipsis;
+  width: 400px;
+}
+
+.ellipsis500 {
+  @extend .ellipsis;
+  width: 500px;
+}

@@ -1,0 +1,81 @@
+.divider-footer {
+  height: 1px;
+  width: 100%;
+  background-color: #555;
+  margin: 25px 0;
+}
+
+.footer {
+  background-color: #222;
+  background-image: url('/assets/images/pam/inv-icons.svg');
+  background-size: 100%;
+  color: #fff;
+  padding: 15px;
+  @include media(767px) {
+    background-size: auto;
+  }
+  .footer_head {
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 15px 0;
+  }
+  .footer_list {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        padding: 2px 0;
+        a {
+          text-decoration: none;
+          color: #ccc;
+          &:hover, &:focus {
+            outline: none;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .footer_content {
+    color: #ccc;
+  }
+
+}
+
+.footer-copyright {
+  background-color: #111;
+  color: #fff;
+  padding: 30px;
+  p {
+    margin: 0;
+    color: #ccc;
+  }
+}
+
+.footer_content--social-label {
+  margin-top: 6px;
+  margin-right: 10px;
+}
+
+.footer_content--social-circle {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  margin: 0 5px;
+  border-radius: 100%;
+}
+
+.footer-cities {
+  @include media(767px) {
+    display: none;
+  }
+  .footer-cities_link {
+    display: block;
+    margin-bottom: 10px;
+    color: #ccc;
+    font-size: 13px;
+  }
+}

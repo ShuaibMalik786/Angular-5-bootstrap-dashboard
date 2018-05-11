@@ -1,0 +1,134 @@
+.table {
+  thead {
+    // background-color:#eee;
+    color: #333;
+    //text-transform: uppercase;
+    //th {
+    //  font-weight: 500;
+    //}
+  }
+}
+
+.no-data-found {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+table.table-wrap {
+  white-space: nowrap;
+}
+
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+  border: 1px solid #e9e9e9 !important;
+}
+
+table.align-verticle, table {
+  td, th {
+    vertical-align: middle !important;
+  }
+}
+
+table.table-colored {
+  thead {
+    color: #fff;
+    background-color: $theme-color;
+  }
+}
+
+// table tr{
+//     background: #fff;
+//     box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+// }
+table {
+  input[type=checkbox] {
+    -ms-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+  }
+}
+
+table.verticle-top {
+  td {
+    vertical-align: top !important;
+  }
+}
+
+.table-action-btn {
+  .dropdown-menu {
+    left: auto;
+    right: 0;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .05);
+  }
+}
+
+// Data Table
+.data-table_info {
+  padding-top: 8px;
+}
+
+.table-tr-error {
+  border: 2px solid $red;
+}
+
+table.data-table {
+  th.table-sorting {
+    cursor: pointer;
+    padding-right: 20px;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-image: url('/assets/images/icons/data-table/sort_both.png');
+  }
+  th.table-sorting_asc {
+    cursor: pointer;
+    padding-right: 20px;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-image: url('/assets/images/icons/data-table/sort_asc.png');
+  }
+  th.table-sorting_dec, th.table-sorting_desc {
+    cursor: pointer;
+    padding-right: 20px;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-image: url('/assets/images/icons/data-table/sort_desc.png');
+  }
+  th.table-sorting_asc_disabled {
+    cursor: pointer;
+    padding-right: 20px;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-image: url('/assets/images/icons/data-table/sort_asc_disabled.png');
+  }
+  th.table-sorting_desc_disabled {
+    cursor: pointer;
+    padding-right: 20px;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-image: url('/assets/images/icons/data-table/sort_desc_disabled.png');
+  }
+}
+
+.table-footer {
+  margin: 15px 0;
+}
+
+.table-header-pagination {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 767px) {
+  // .tablesaw-stack tbody tr:not(:last-child) {
+  //   border-bottom: 2px solid #0B0B0D;
+  // }
+  .tablesaw-stack tbody tr {
+    border: 2px solid #888;
+  }
+}

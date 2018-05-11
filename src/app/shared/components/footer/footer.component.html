@@ -1,0 +1,92 @@
+<!-- Footer -->
+<footer>
+  <div class="footer">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="footer_head">
+            About Us
+          </div>
+          <div class="footer_content">
+            <p>
+              Happylocate, India’s first One Stop Relocation Platform, was conceptualized to reform the way India
+              relocates. Relocation has mostly been a nightmare and a tough experience to many where it adds to
+              complications when users struggle to find right vendors, face price uncertainty and ignorance on managing
+              them.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="footer_head">
+            Links
+          </div>
+          <div class="footer_list">
+            <ul>
+              <li><a routerLink="/privacy-policy">Privacy Policy</a></li>
+              <li><a routerLink="/terms-and-conditions">Terms & Conditions</a></li>
+              <li><a routerLink="/faq">FAQ</a></li>
+              <li><a routerLink="/refund-policy">Refund Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="footer_head">
+            Resources
+          </div>
+          <div class="footer_list">
+            <ul>
+              <li><a routerLink="/about">About Us</a></li>
+              <li><a routerLink="/contact-us">Contact Us</a></li>
+              <li><a routerLink="/corporates">Corporates</a></li>
+              <li><a routerLink="/packers-and-movers-vendor">Vendors</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="divider-footer"></div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="footer_content">
+            <i class="fa fa-map-marker p-r-5"></i>
+            HappyLocate Relocation Services Pvt. Ltd<br> 14, LBS Nagar, K Narayanpura, Bangalore North, 560077
+          </div>
+        </div>
+        <div class="col-sm-6 text-right">
+          <div class="footer_content">
+            <a class="footer_content--social-circle facebook" href="https://www.facebook.com/HappyLocateOfficial"
+               target="_blank">
+              <i class="fa fa-facebook center-it"></i>
+            </a>
+            <a class="footer_content--social-circle twitter" href="https://twitter.com/HappyLocate" target="_blank">
+              <i class="fa fa-twitter center-it"></i>
+            </a>
+            <a class="footer_content--social-circle linkedin" href="https://www.linkedin.com/company/happylocate"
+               target="_blank">
+              <i class="fa fa-linkedin center-it"></i>
+            </a>
+            <a class="footer_content--social-circle google-plus"
+               href="https://plus.google.com/u/0/107844391033715237011" target="_blank">
+              <i class="fa fa-google-plus center-it"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <ng-container *ngIf="!this.hideFooterInfo">
+        <div class="divider-footer"></div>
+        <div class="row footer-cities">
+          <div *ngFor="let city of pamCities" class="col-md-3 col-sm-6 footer_content">
+            <a routerLink="/packers-and-movers"
+               class="footer-cities_link">Packers &amp; Movers in {{ city }}</a>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="footer-copyright">
+    <p class="text-center">&copy; {{ currentYear }} HappyLocate. All Right Reserved.</p>
+  </div>
+</footer>

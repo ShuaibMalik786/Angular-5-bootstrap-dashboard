@@ -1,0 +1,65 @@
+// Modal
+.modal {
+  .modal-content {
+    border-radius: 0;
+    padding: 15px;
+    @include media(767px) {
+      padding: 0;
+    }
+    .modal-footer {
+      text-align: left;
+    }
+  }
+}
+
+button.close {
+  position: absolute;
+  right: -12px;
+  top: -12px;
+  background-color: #fff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  outline: none;
+  opacity: 1;
+  @include media(767px) {
+    right: 8px;
+    top: 8px;
+  }
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.modal-body {
+  button.close {
+    right: -25px;
+    top: -25px;
+    @include media(767px) {
+      right: -8px;
+      top: -8px;
+    }
+  }
+}
+
+// fade and scale
+.modal.fade .modal-dialog {
+  opacity: 0;
+  @include transform(scale(0.1));
+  @include transition(all 0.3s ease);
+}
+
+.modal.fade.in .modal-dialog {
+  opacity: 1;
+  @include transform(scale(1));
+  @include transform(translate3d(0%, 0, 0));
+}
+
+.modal-content {
+  border: none;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 40px 77px rgba(0, 0, 0, 0.22), 0 27px 24px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 40px 77px rgba(0, 0, 0, 0.22), 0 27px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 40px 77px rgba(0, 0, 0, 0.22), 0 27px 24px rgba(0, 0, 0, 0.2);
+}

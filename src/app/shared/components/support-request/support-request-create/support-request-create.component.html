@@ -1,0 +1,67 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>Support</h1>
+</section>
+
+<section class="content">
+  <div class="row">
+    <div class="col-lg-6 col-md-8 col-sm-12">
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title">New Request</h3>
+        </div>
+        <div class="box-body">
+          <form [formGroup]="form.getForm()" (ngSubmit)="onFormSubmit()">
+          <div class="form-group" [ngClass]="form.hasError('category') ? 'has-error': ''">
+            <div class="form-label">Category *</div>
+            <div class="hl-select-arrow-outline">
+              <select formControlName="category" class="hl-input-select">
+                <option [value]="null" selected disabled>Select request category</option>
+                <option *ngFor="let category of categories"
+                        [value]="category.id">{{ category.name }}
+                </option>
+              </select>
+            </div>
+            <span class="help-block" *ngIf="form.hasError('category')">
+              {{ form.getError('category') }}
+            </span>
+          </div>
+
+          <div class="form-group" [ngClass]="form.hasError('message') ? 'has-error': ''">
+            <div class="form-label">Message *</div>
+            <textarea formControlName="message" rows="6" class="form-control ta-ver-resize"
+                      maxlength="3000"></textarea>
+            <div class="text-muted">
+              {{ form.getValue('message') ? form.getValue('message').length : 0 }} / 3000
+            </div>
+            <span class="help-block" *ngIf="form.hasError('message')">
+              {{ form.getError('message') }}
+            </span>
+          </div>
+
+          <div class="form-group input-upload-box" [ngClass]="form.hasError('attachment') ? 'has-error': ''">
+            <div class="form-label">Attachment <span class="optional-label">(Optional)</span></div>
+            <div class="input-group">
+              <input formControlName="file_name" [(ngModel)]="fileName"
+                     class="form-control fake-shadow" placeholder="Attach File" readonly>
+              <div class="input-group-btn">
+                <div class="fileUpload btn btn-danger fake-shadow">
+                  <span>Choose</span>
+                  <input formControlName="attachment" #attachment type="file"
+                         class="attachment_upload" (change)="onFileChange($event)">
+                </div>
+              </div>
+            </div>
+            <p class="help-block">Only jpg, png and bmp image files of less than 2MB allowed.</p>
+            <span class="help-block" *ngIf="form.hasError('attachment')">
+              {{ form.getError('attachment') }}
+            </span>
+          </div>
+
+          <button #submit class="btn btn-hl">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

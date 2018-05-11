@@ -1,0 +1,172 @@
+#page-loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#inner-loading {
+  background: none;
+  position: relative;
+  height: 400px;
+}
+
+#simple-loading, .simple-loading {
+  background: none;
+  position: relative;
+  height: 50px;
+  margin: auto;
+}
+
+#hotel-detail-loading, .hotel-detail-loading {
+  background: none;
+  position: relative;
+  height: 300px;
+}
+
+#full-height-loading {
+  background: none;
+  position: relative;
+  height: 100vh;
+}
+
+.loading-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: #f5f5f5;
+}
+
+.three-balls {
+  margin: 0 auto;
+  width: 70px;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 45%;
+}
+
+.three-balls .ball {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #1ab7c8;
+  -webkit-animation: bouncedelay 3.0s infinite cubic-bezier(.62, .28, .23, .99) both;
+  -moz-animation: bouncedelay 3.0s infinite cubic-bezier(.62, .28, .23, .99) both;
+  -ms-animation: bouncedelay 3.0s infinite cubic-bezier(.62, .28, .23, .99) both;
+  -o-animation: bouncedelay 3.0s infinite cubic-bezier(.62, .28, .23, .99) both;
+  animation: bouncedelay 3.0s infinite cubic-bezier(.62, .28, .23, .99) both;
+}
+
+.three-balls .ball1 {
+  -webkit-animation-delay: -.16s;
+  -moz-animation-delay: -.16s;
+  -ms-animation-delay: -.16s;
+  -o-animation-delay: -.16s;
+  animation-delay: -.16s;
+}
+
+.three-balls .ball2 {
+  -webkit-animation-delay: -.08s;
+  -moz-animation-delay: -.08s;
+  -ms-animation-delay: -.08s;
+  -o-animation-delay: -.08s;
+  animation-delay: -.08s;
+}
+
+.loader__text {
+  display: none;
+}
+
+@keyframes bouncedelay {
+  0% {
+    bottom: 0;
+  }
+  16.66% {
+    bottom: 20px;
+  }
+  33.33% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 20px;
+  }
+  66.66% {
+    bottom: 0px;
+  }
+  83.33% {
+    bottom: 20px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes bouncedelay {
+  0% {
+    bottom: 0;
+  }
+  16.66% {
+    bottom: 20px;
+  }
+  33.33% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 20px;
+  }
+  66.66% {
+    bottom: 0px;
+  }
+  83.33% {
+    bottom: 20px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+.circle-loader {
+  border: 2px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 2px solid #3498db;
+  width: 22px;
+  height: 22px;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.input-loader {
+  position: relative;
+}
+
+.input-loader_circle {
+  position: absolute;
+  top: calc(50% - 11px);
+  right: 15px;
+}

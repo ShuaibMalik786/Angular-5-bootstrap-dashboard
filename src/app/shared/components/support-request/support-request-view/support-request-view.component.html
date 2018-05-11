@@ -1,0 +1,95 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    Support
+    <small>Request Details</small>
+  </h1>
+</section>
+
+<section class="content">
+  <div class="row">
+    <div class="col-md-8 col-sm-12">
+      <div class="box">
+        <div class="box-header">
+          <h4 class="box-title">Request ID : <strong>{{ request.id }}</strong></h4>
+        </div>
+        <div class="box-body">
+          <div class="row ">
+            <div class="col-sm-3 text-muted">
+              <p>Name</p>
+            </div>
+            <div class="col-sm-9">
+              <p>{{ request.name }}</p>
+            </div>
+          </div>
+          <div class="row " *ngIf="!authService.userHasRole(roleConstant.USERNAME_BASED_ROLES)">
+            <div class="col-sm-3 text-muted">
+              <p>Email</p>
+            </div>
+            <div class="col-sm-9">
+              <p>{{ request.email }}</p>
+            </div>
+          </div>
+          <div class="row " *ngIf="authService.userHasRole(roleConstant.USERNAME_BASED_ROLES)">
+            <div class="col-sm-3 text-muted">
+              <p>Username</p>
+            </div>
+            <div class="col-sm-9">
+              <p>{{ request.email }}</p>
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col-sm-3 text-muted">
+              <p>Mobile</p>
+            </div>
+            <div class="col-sm-9">
+              <p>
+                <span *ngIf="request.mobile">{{ request.mobile }}</span>
+                <span *ngIf="!request.mobile" class="label label-default">Not Available</span>
+              </p>
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col-sm-3 text-muted">
+              <p>Category</p>
+            </div>
+            <div class="col-sm-9">
+              <p>{{ request.category }}</p>
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col-sm-3 text-muted">
+              <p>Message</p>
+            </div>
+            <div class="col-sm-9">
+              <div class="well word-wrap">{{ request.message }}</div>
+            </div>
+          </div>
+          <div class="row" *ngIf="request.attachment">
+            <div class="col-sm-3 text-muted">
+              <p>Attachment</p>
+            </div>
+            <div class="col-sm-9">
+              <p>
+                <a #image class="btn btn-primary btn-sm" [attr.data-mfp-src]="request.attachment">View Attachment</a>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3 text-muted">
+              <p>Submitted Date</p>
+            </div>
+            <div class="col-sm-9">
+              <p>{{ request.created_at }}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-offset-3">
+              <a routerLink="./../"><i class="fa fa-arrow-left"></i> Back</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

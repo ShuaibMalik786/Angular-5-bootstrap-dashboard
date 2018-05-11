@@ -1,0 +1,81 @@
+<!--Navbar-->
+<nav class="navbar navbar-common navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" routerLink="/">
+        <img src="/build/assets/images/logo/logo.svg" width="150" alt="HappyLocate Logo">
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="hl-phone"><a href="tel:+918884447224"> <i class="fa fa-phone"></i> 8884447224 </a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li routerLinkActive="active" class="hidden-sm">
+          <a routerLink="/about">About Us</a>
+        </li>
+        <li routerLinkActive="active">
+          <a routerLink="/corporates">Corporates</a>
+        </li>
+        <li routerLinkActive="active">
+          <a routerLink="/packers-and-movers-vendor">Vendors</a>
+        </li>
+        <li>
+          <a href="https://blog.happylocate.com" target="_blank">Blog</a>
+        </li>
+        <li routerLinkActive="active" class="hidden-sm">
+          <a routerLink="/faq" class="text-red">FAQs</a>
+        </li>
+
+        <li class="nav-profile" *ngIf="!isLoggedIn">
+          <a class="dropdown-toggle sign-in-btn" data-toggle="dropdown" href="#">Sign In <span class="caret"></span></a>
+          <ul class="dropdown-menu nav-profile_dropdown-menu">
+            <li class="nav-profile_href" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+              <a routerLink="/login">Customer Login</a>
+            </li>
+            <li class="nav-profile_href" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+              <a routerLink="/packers-and-movers-vendor/login">Vendor Login</a>
+            </li>
+            <li class="nav-profile_href" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+              <a routerLink="/corporates/login">Corporate Login</a>
+            </li>
+            <ng-container *ngIf="showAdminLogin">
+              <li class="nav-profile_href" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <a routerLink="/admin/login">Admin Login</a>
+              </li>
+            </ng-container>
+          </ul>
+        </li>
+
+        <li class="nav-profile" *ngIf="isLoggedIn">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            Hello, {{ user.name }} <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu nav-profile_dropdown-menu">
+            <li>
+              <div class="nav-profile_img">
+                <img [src]="user.profile_picture_url" alt="Profile picture" width="60">
+              </div>
+              <div class="nav-profile_name">{{ user.name }}</div>
+            </li>
+            <li class="divider"></li>
+            <li class="nav-profile_href">
+              <a [routerLink]="dashboardUrl">
+                <i class="fa fa-user"></i> My Account
+              </a>
+            </li>
+            <li class="nav-profile_href">
+              <a (click)="logout()" class="cursor-pointer"><i class="fa fa-sign-out"></i> Logout</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

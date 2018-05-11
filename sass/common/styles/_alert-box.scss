@@ -1,0 +1,94 @@
+.alert-box {
+  background: transparent;
+  text-align: center;
+  .alert-box_icon {
+    margin: 20px 0;
+    .circle-icon {
+      height: 80px;
+      width: 80px;
+      border-radius: 100%;
+      border: 1px solid #ccc;
+      margin: 0 auto;
+      position: relative;
+    }
+    i.alert-i {
+      color: #888;
+      font-size: 40px;
+    }
+    span {
+      color: #888;
+      font-size: 40px;
+      &:before {
+        font-family: "fontawesome";
+      }
+    }
+    .circle-icon.circle-icon_success {
+      span.alert-icon {
+        &:before {
+          content: "\f00c";
+          color: $green;
+        }
+      }
+      i.alert-i {
+        color: $green;
+      }
+    }
+    .circle-icon.circle-icon_danger {
+      span.alert-icon {
+        &:before {
+          content: "\f00d";
+          color: $red;
+        }
+      }
+      i.alert-i {
+        color: $red;
+      }
+    }
+    .circle-icon.circle-icon_info {
+      span.alert-icon {
+        &:before {
+          content: "\f129";
+          color: $material-blue;
+        }
+      }
+      i.alert-i {
+        color: $material-blue;
+      }
+    }
+    .circle-icon.circle-icon_question {
+      span.alert-icon {
+        &:before {
+          content: "\f128";
+          color: $material-blue;
+        }
+      }
+      i.alert-i {
+        color: $material-blue;
+      }
+    }
+    .circle-icon.circle-icon_exclamation {
+      span.alert-icon {
+        &:before {
+          content: "\f12a";
+          color: $red;
+        }
+      }
+      i.alert-i {
+        color: $material-blue;
+      }
+    }
+  }
+  .alert-box_main-text {
+    margin: 20px 0;
+    font-size: 24px;
+  }
+  .alert-box_sub-text {
+    margin: 10px 0;
+  }
+  .alert-box_footer {
+    padding: 15px;
+    .btn {
+      min-width: 100px;
+    }
+  }
+}

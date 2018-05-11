@@ -1,0 +1,120 @@
+@media print {
+  *,
+  *:before,
+  *:after {
+    color: #000 !important;
+    text-shadow: none !important;
+    background: transparent !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+  .navbar {
+    display: none;
+  }
+  .btn > .caret,
+  .dropup > .btn > .caret {
+    border-top-color: #000 !important;
+  }
+  .label {
+    border: 1px solid transparent !important;
+    display: inline !important;
+    padding: .2em .6em .3em !important;
+    font-size: 75% !important;
+    font-weight: bold !important;
+    line-height: 1 !important;
+    color: #fff !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    vertical-align: baseline !important;
+    border-radius: .25em !important;
+  }
+  .label-success {
+    background-color: #5cb85c !important;
+  }
+  .label-danger {
+    background-color: #d9534f !important;
+  }
+  .label-warning {
+    background-color: #f0ad4e !important;
+  }
+
+  .table {
+    border-collapse: collapse !important;
+  }
+  .table td,
+  .table th {
+    background-color: transparent !important;
+  }
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid transparent !important;
+  }
+  .orange-star {
+    color: $orange !important;
+  }
+}
+
+@media screen {
+  .invoice {
+    position: relative;
+    background: #fff;
+    border: 1px solid #f4f4f4;
+    padding: 20px;
+    max-width: 900px;
+    margin: 15px auto;
+  }
+}
+
+.invoice-col-6 {
+  float: left;
+  width: 50%;
+}
+
+@media print {
+  table td {
+    padding: 2px !important;
+  }
+  .hide-invoice {
+    display: none;
+  }
+}

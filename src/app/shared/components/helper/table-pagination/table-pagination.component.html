@@ -1,0 +1,68 @@
+<div class="row pagination-row" *ngIf="pagination.isEnabled()">
+
+  <div *ngIf="simple" class="col-sm-4">
+    <div>
+      <label>
+        <span>Show </span>
+        <select class="hl-input-select__alone" [(ngModel)]="limit" (change)="changeLimit()">
+          <option *ngFor="let limit of limitValues" [value]="limit">{{limit}}</option>
+        </select>
+        <span> entries</span>
+      </label>
+    </div>
+  </div>
+
+  <div *ngIf="!simple" class="col-sm-4">
+    <div class="pull-left">
+      {{ pagination.getInfoText() }}
+    </div>
+  </div>
+
+  <div class="col-sm-8">
+    <ul class="pagination no-margin pull-right">
+      <!-- Previous Page Link -->
+
+      <li *ngIf="pagination.onFirstPage(); else elsePreviousPage" class="disabled">
+        <span>&laquo;</span>
+      </li>
+      <ng-template #elsePreviousPage>
+        <li>
+          <a (click)="changePage(pagination.previousPage())" class="cursor-pointer" rel="prev">&laquo;</a>
+        </li>
+      </ng-template>
+
+      <!-- Pagination Elements -->
+      <ng-container *ngFor="let element of pagination.getElements()">
+        <!-- "Three Dots" Separator -->
+        <li *ngIf="pagination.isSeparatorElement(element); else elsePagesArray" class="disabled">
+          <span>{{ element }}</span>
+        </li>
+
+        <!-- Array Of Links -->
+        <ng-template #elsePagesArray>
+          <ng-container *ngFor="let page of element">
+            <!-- Current Page -->
+            <li *ngIf="page == pagination.currentPage(); else elseNextPageItem" class="active">
+              <span>{{ page }}</span>
+            </li>
+            <ng-template #elseNextPageItem>
+              <li>
+                <a (click)="changePage(page)" class="cursor-pointer">{{ page }}</a>
+              </li>
+            </ng-template>
+          </ng-container>
+        </ng-template>
+      </ng-container>
+
+      <!-- Next Page Link -->
+      <li *ngIf="pagination.hasMorePages(); else elseNextPage">
+        <a (click)="changePage(pagination.nextPage())" class="cursor-pointer" rel="next">&raquo;</a>
+      </li>
+      <ng-template #elseNextPage>
+        <li class="disabled">
+          <span>&raquo;</span>
+        </li>
+      </ng-template>
+    </ul>
+  </div>
+</div>

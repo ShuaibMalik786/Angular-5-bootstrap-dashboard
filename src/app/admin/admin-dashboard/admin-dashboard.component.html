@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <app-admin-dashboard-header [user]="user"></app-admin-dashboard-header>
+  <app-admin-dashboard-sidebar [user]="user"></app-admin-dashboard-sidebar>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <router-outlet></router-outlet>
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <p>&copy; {{ currentYear }} CompanyName. All Right Reserved.</p>
+  </footer>
+
+  <div class="control-sidebar-bg"></div>
+</div>

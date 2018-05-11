@@ -1,0 +1,28 @@
+// adminlte
+@import '~admin-lte/dist/css/AdminLTE.css';
+@import '~admin-lte/dist/css/skins/skin-black.css';
+// variables
+@import 'common/variables';
+// mixins
+@import 'common/mixins';
+// colors
+@import 'common/colors';
+// Margin padding
+@import 'common/margin';
+@import 'common/padding';
+// Forms
+@import 'common/forms';
+// Style
+@import 'common/style';
+// Dashboard
+@import 'dashboard/adminlte-mod';
+@import 'dashboard/dashboard-mod';
+// user
+@import 'user/user-common';
+@import 'user/pam';
+@import 'user/hotel';
+// pam vendor
+@import 'pam-vendor/pam-vendor-common';
+// Corporate
+@import 'corporate/corporate-common';
+

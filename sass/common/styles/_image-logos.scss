@@ -1,0 +1,33 @@
+.image-logo {
+  background: url('/assets/images/icons/payment/payments.png') no-repeat 0 0;
+  &.aesk {
+    background-position: 0 0;
+    width: 89px;
+    height: 30px;
+  }
+  &.visa {
+    background-position: -88px 0;
+    width: 67px;
+    height: 30px;
+  }
+  &.payu {
+    background-position: -154px 0;
+    width: 82px;
+    height: 30px;
+  }
+}
+
+.payment-logos {
+  position: relative;
+  padding-top: 15px;
+  @include media(767px) {
+    display: none;
+  }
+  .center-it {
+    width: 300px;
+  }
+  .image-logo {
+    float: left;
+    margin-right: 20px;
+  }
+}

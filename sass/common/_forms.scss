@@ -1,0 +1,389 @@
+.form-control {
+  border-radius: 0px;
+  padding: 6px 15px !important;
+  border: 1px solid #ccc;
+  box-shadow: none;
+  &:focus {
+    border-color: #3c8dbc;
+    box-shadow: none;
+  }
+}
+
+// Select
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+}
+
+.hl-input-select__alone {
+  -webkit-appearance: menulist;
+  -moz-appearance: menulist;
+  -ms-appearance: menulist;
+  -o-appearance: menulist;
+  padding: 3px;
+}
+
+.hl-select-arrow-outline {
+  background-color: #fff;
+  border: none;
+  position: relative;
+  z-index: 1;
+  height: 34px;
+  &:before {
+    content: "\f0d7";
+    font-family: "fontawesome";
+    position: absolute;
+    top: calc(50% - 10px);
+    top: -webkit-calc(50% - 10px);
+    right: 10px;
+    color: #333;
+  }
+  .hl-input-select {
+    background-color: transparent;
+    padding: 6px 22px 6px 15px;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    &:focus, &:active {
+      border-color: #3c8dbc;
+      outline: none;
+    }
+  }
+  .has-error {
+    border-color: #dd4b39 !important;
+  }
+}
+
+.has-error {
+  .hl-select-arrow-outline {
+    border-color: #dd4b39 !important;
+  }
+  .hl-input-select {
+    border-color: #dd4b39 !important;
+  }
+
+  .select2-selection {
+    border-color: #dd4b39 !important;
+  }
+}
+
+.inside-input {
+  position: relative;
+  input {
+    padding-right: 50px !important;
+  }
+  .inside-input-text {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+// checkbox
+.hl-input-checkbox {
+  display: none;
+}
+
+.checkbox-name-in, .radio-btn-in {
+  cursor: pointer;
+  padding-right: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.hl-input-checkbox + .checkbox-name-in:before {
+  content: "\f096";
+  font-family: "fontawesome";
+  width: 1em;
+  display: inline-block;
+  margin-right: 7px;
+  transform: scale(1.2) translateY(0.55px) translateX(1.2px);
+}
+
+.hl-input-checkbox:checked + .checkbox-name-in:before {
+  content: "\f14a";
+  color: $theme-color;
+  animation: kick 0.2s ease-in;
+  -webkit-animation: kick 0.2s ease-in;
+  -moz-animation: kick 0.2s ease-in;
+  -ms-animation: kick 0.2s ease-in;
+  -o-animation: kick 0.2s ease-in;
+}
+
+.hl-input-checkbox:disabled + .checkbox-name-in:before {
+  content: "\f0c8";
+  color: #aaa;
+}
+
+// .hl-input-checkbox:checked + .checkbox-name-in:before,
+// .hl-input-checkbox:disabled + .checkbox-name-in:before {
+//     content: "\f14a";
+//     color: #aaa;
+// }
+
+// Radio
+.hl-input-radio {
+  display: none;
+}
+
+.hl-input-radio + .radio-btn-in:before {
+  content: "\f1db";
+  font-family: "fontawesome";
+  width: 1em;
+  display: inline-block;
+  margin-right: 7px;
+  transform: scale(1.2) translateY(-0.4px) translateX(1.2px);
+}
+
+.hl-input-radio:checked + .radio-btn-in:before {
+  content: "\f058";
+  color: $theme-color;
+  animation: kick 0.2s ease-in;
+  -webkit-animation: kick 0.2s ease-in;
+  -moz-animation: kick 0.2s ease-in;
+  -ms-animation: kick 0.2s ease-in;
+  -o-animation: kick 0.2s ease-in;
+}
+
+.hl-input-radio:disabled + .radio-btn-in:before {
+  content: "\f111";
+  color: #aaa;
+}
+
+// .hl-input-radio:checked + .radio-btn-in:before,
+// .hl-input-radio:disabled + .radio-btn-in:before {
+//     content: "\f111";
+//     color: #aaa;
+// }
+
+@keyframes kick {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes kick {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@-ms-keyframes kick {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@-o-keyframes kick {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.input-xs {
+  padding: 2px 15px !important;
+  height: 26px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.input-sm {
+  padding: 4px 15px !important;
+  height: 30px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.input-md {
+  padding: 8px 15px !important;
+  height: 38px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.input-lg {
+  padding: 10px 15px !important;
+  height: 42px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.input-xl {
+  padding: 12px 15px !important;
+  height: 46px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+// Select box
+.hl-select-arrow-outline.input-xs {
+  padding: 0 !important;
+  height: 26px;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 1.47;
+  border-radius: 0;
+  .hl-input-select {
+    padding: 2px 22px 2px 15px !important;
+  }
+}
+
+.hl-select-arrow-outline.input-sm {
+  padding: 0 !important;
+  height: 30px;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 1.47;
+  border-radius: 0;
+  .hl-input-select {
+    padding: 4px 22px 4px 15px !important;
+  }
+}
+
+.hl-select-arrow-outline.input-md {
+  padding: 0 !important;
+  height: 38px;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 1.47;
+  border-radius: 0;
+  .hl-input-select {
+    padding: 8px 22px 8px 15px !important;
+  }
+}
+
+.hl-select-arrow-outline.input-lg {
+  padding: 0 !important;
+  height: 42px;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 1.47;
+  border-radius: 0;
+  .hl-input-select {
+    padding: 10px 22px 10px 15px !important;
+  }
+}
+
+.hl-select-arrow-outline.input-xl {
+  padding: 0 !important;
+  height: 46px;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 1.47;
+  border-radius: 0;
+  .hl-input-select {
+    padding: 12px 22px 12px 15px !important;
+  }
+}
+
+// box-notify
+.input-error {
+  border-color: $red;
+}
+
+.input-success {
+  border-color: $green;
+}
+
+.input-warning {
+  border-color: $orange;
+}
+
+// Addons
+.input-group-addon {
+  background-color: #eee !important;
+}
+
+.ta-no-resize {
+  resize: none;
+}
+
+.ta-ver-resize {
+  resize: vertical;
+}
+
+.ta-hor-resize {
+  resize: horizontal;
+}
+
+.select2-container--default .select2-selection--single {
+  &:focus, &:active {
+    border-color: #3c8dbc;
+    box-shadow: none;
+  }
+}
+
+.has-feedback.has-clear {
+  /* Remove Internet Explorer native clear button */
+  input::-ms-clear {
+    display: none;
+  }
+
+  .form-control-clear {
+    color: #bbb;
+    color: rgba(0, 0, 0, 0.4);
+
+    /*
+     * Enable pointer events as they have been disabled since Bootstrap 3.3
+     * See https://github.com/twbs/bootstrap/pull/14104
+     */
+    pointer-events: auto;
+
+    &:hover {
+      color: #777;
+      color: rgba(0, 0, 0, 0.7);
+      cursor: pointer;
+    }
+  }
+
+  &.has-empty-value {
+    /* Do not display clear button if field has empty value */
+    .form-control-clear {
+      display: none;
+    }
+  }
+}
