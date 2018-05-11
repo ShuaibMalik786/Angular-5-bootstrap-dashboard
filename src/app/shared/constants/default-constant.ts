@@ -1,6 +1,6 @@
 export class DefaultConstant {
-  static SITE_NAME = 'HappyLocate';
-  static TITLE = 'HappyLocate - Hassle Free Relocation Experience';
+  static SITE_NAME = 'angular 5 bootstrap dashboard';
+  static TITLE = 'angular 5 bootstrap dashboard';
   static DESCRIPTION = 'HappyLocate is a One-Stop Relocation Platform for multiple relocation needs with only verified and established packers and Movers, 16000+ Hotels to ensure a hassle-free relocation experience.';
 
   static PROFILE_PICTURE = '/build/assets/images/default/profile-picture.jpg';
