@@ -17,8 +17,10 @@ import { UsersEditComponent } from './users/user-edit/user-edit.component';
 import { LoginPageComponent } from './pages/login/login.component';
 import { IconsComponent } from './icons/icons.component';
 import { NotieComponent } from './notie/notie.component';
+import { UiElementsComponent } from './ui-elements/ui-elements.component';
 
 const siteName = DefaultConstant.SITE_NAME;
+import { SweetAlertComponent } from './sweet-alert/sweet-alert.component';
 
 const routes: Routes = [
   {
@@ -26,9 +28,12 @@ const routes: Routes = [
     component: AdminDashboardComponent,
     data: { title: `Admin Dashboard | ${siteName}` },
     children: [
-      { path: '', component: NewsHeadlinesComponent },
+      { path: '', component: DashboardHomeComponent },
+      { path: 'table-api', component: NewsHeadlinesComponent },
       { path: 'profile', component: AccountProfileComponent },
       { path: 'settings', component: AccountSettingsComponent },
+      { path: 'ui-elements', component: UiElementsComponent },
+      { path: 'sweet-alert', component: SweetAlertComponent },
 
       { path: 'pages/login', component: LoginPageComponent },
       { path: 'pages/register', component: RegisterComponent },

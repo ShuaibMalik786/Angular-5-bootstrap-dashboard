@@ -24,6 +24,8 @@ import { RegisterComponent } from './pages/register/register.component';
 import { LoginPageComponent } from './pages/login/login.component';
 import {IconsComponent} from './icons/icons.component';
 import { NotieComponent } from './notie/notie.component';
+import { UiElementsComponent } from './ui-elements/ui-elements.component';
+import { SweetAlertComponent } from './sweet-alert/sweet-alert.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { NotieComponent } from './notie/notie.component';
     RegisterComponent,
     LoginPageComponent,
     IconsComponent,
-    NotieComponent
+    NotieComponent,
+    UiElementsComponent,
+    SweetAlertComponent
   ],
   imports: [
     CommonModule,
