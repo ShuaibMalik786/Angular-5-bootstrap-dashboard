@@ -7,7 +7,6 @@ import { NguiAutoCompleteModule } from '@ngui/auto-complete';
 
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { BaseLoginComponent } from './components/auth/base-login/base-login.component';
 import { PopupLoginComponent } from './components/auth/popup-login/popup-login.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { StarRatingComponent } from './components/helper/star-rating/star-rating.component';
@@ -38,7 +37,6 @@ import { SafeHtmlPipe } from './pipes/safe-html.pipe';
     // Components
     HeaderComponent,
     FooterComponent,
-    BaseLoginComponent,
     PopupLoginComponent,
     PageNotFoundComponent,
     StarRatingComponent,
@@ -75,7 +73,6 @@ import { SafeHtmlPipe } from './pipes/safe-html.pipe';
     // Components
     HeaderComponent,
     FooterComponent,
-    BaseLoginComponent,
     PopupLoginComponent,
     PageNotFoundComponent,
     StarRatingComponent,

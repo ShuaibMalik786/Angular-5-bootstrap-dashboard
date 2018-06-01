@@ -18,9 +18,11 @@ import { LoginPageComponent } from './pages/login/login.component';
 import { IconsComponent } from './icons/icons.component';
 import { NotieComponent } from './notie/notie.component';
 import { UiElementsComponent } from './ui-elements/ui-elements.component';
+import { ToastrComponent } from './toastr/toastr.component';
 
 const siteName = DefaultConstant.SITE_NAME;
 import { SweetAlertComponent } from './sweet-alert/sweet-alert.component';
+import { UiComponentsComponent } from './ui-components/ui-components.component';
 
 const routes: Routes = [
   {
@@ -34,13 +36,14 @@ const routes: Routes = [
       { path: 'settings', component: AccountSettingsComponent },
       { path: 'ui-elements', component: UiElementsComponent },
       { path: 'sweet-alert', component: SweetAlertComponent },
+      { path: 'ui-components', component: UiComponentsComponent },
 
       { path: 'pages/login', component: LoginPageComponent },
       { path: 'pages/register', component: RegisterComponent },
 
       { path: 'icons', component: IconsComponent },
       { path: 'notie', component: NotieComponent },
-
+      { path: 'toastr', component: ToastrComponent },
 
       { path: 'users', component: UsersComponent },
       { path: 'users/add', component: UsersAddComponent },

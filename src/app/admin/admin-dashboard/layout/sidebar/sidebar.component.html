@@ -80,12 +80,6 @@
                 </a>
             </li>
 
-            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-                <a routerLink="/admin/notie">
-                    <i class="fa fa-home"></i>
-                    <span>Notie</span>
-                </a>
-            </li>
 
             <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
                 <a routerLink="/admin/table-api">
@@ -101,10 +95,38 @@
                 </a>
             </li>
 
+
+            <li class="treeview" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <a href="#">
+                    <i class="fa fa-window-maximize"></i>
+                    <span>Alerts</span>
+                    <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+                </a>
+                <ul class="treeview-menu">
+
+                    <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        <a routerLink="/admin/notie">
+                            <span>Notie</span>
+                        </a>
+                    </li>
+                    <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        <a routerLink="/admin/toastr">
+                            <span>Toastr</span>
+                        </a>
+                    </li>
+                    <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        <a routerLink="/admin/sweet-alert">
+                            <span>Sweet Alert</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
             <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-                <a routerLink="/admin/sweet-alert">
-                    <i class="fa fa-table"></i>
-                    <span>Sweet Alert</span>
+                <a routerLink="/admin/ui-components">
+                    <span>Ui-components</span>
                 </a>
             </li>
 

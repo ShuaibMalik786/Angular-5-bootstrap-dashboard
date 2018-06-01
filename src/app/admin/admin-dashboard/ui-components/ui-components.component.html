@@ -1,0 +1,47 @@
+<section class="content">
+    <h2>UI-Components</h2>
+
+    <div class="box">
+        <h3>Star rating</h3>
+        <div class="box-body">
+            <select class="col-xs-3 col-lg-1" [(ngModel)]="rating">
+                <option value="null" disabled selected="selected">Select rating</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <div class="col-xs-6 col-lg-6">
+                <app-star-rating [rating]="rating"></app-star-rating>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="box">
+        <h3>Loading</h3>
+        <div class="box-body">
+            <app-loading></app-loading>
+        </div>
+    </div>
+    <div class="box">
+        <h3>Popup login</h3>
+        <div class="box-body">
+            <app-popup-login></app-popup-login>
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#login-modal">
+                Login
+            </button>
+        </div>
+    </div>
+
+
+    <div class="box">
+        <h3>Spinner</h3>
+        <div class="box-body">
+            <app-spinner></app-spinner>
+        </div>
+    </div>
+
+
+</section>

@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { NguiAutoCompleteModule } from '@ngui/auto-complete';
 import { NgSelect2Module } from 'ng-select2';
+import { ToastModule } from 'ng2-toastr/ng2-toastr';
 
 import { AdminDashboardRoutingModule } from './admin-dashboard-routing.module';
 import { SharedModule } from '../../shared/shared.module';
@@ -22,10 +23,12 @@ import { UsersEditComponent } from './users/user-edit/user-edit.component';
 import { UsersViewComponent } from './users/user-view/user-view.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginPageComponent } from './pages/login/login.component';
-import {IconsComponent} from './icons/icons.component';
+import { IconsComponent } from './icons/icons.component';
 import { NotieComponent } from './notie/notie.component';
 import { UiElementsComponent } from './ui-elements/ui-elements.component';
 import { SweetAlertComponent } from './sweet-alert/sweet-alert.component';
+import { ToastrComponent } from './toastr/toastr.component';
+import { UiComponentsComponent } from './ui-components/ui-components.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +49,9 @@ import { SweetAlertComponent } from './sweet-alert/sweet-alert.component';
     IconsComponent,
     NotieComponent,
     UiElementsComponent,
-    SweetAlertComponent
+    SweetAlertComponent,
+    ToastrComponent,
+    UiComponentsComponent
   ],
   imports: [
     CommonModule,
@@ -55,7 +60,8 @@ import { SweetAlertComponent } from './sweet-alert/sweet-alert.component';
     FormsModule,
     ReactiveFormsModule,
     NguiAutoCompleteModule,
-    NgSelect2Module
+    NgSelect2Module,
+    ToastModule.forRoot()
   ]
 })
 export class AdminDashboardModule {
