@@ -3,8 +3,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { NguiAutoCompleteModule } from '@ngui/auto-complete';
-
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PopupLoginComponent } from './components/auth/popup-login/popup-login.component';
@@ -65,7 +63,6 @@ import { SafeHtmlPipe } from './pipes/safe-html.pipe';
   imports: [
     CommonModule,
     RouterModule,
-    NguiAutoCompleteModule,
     FormsModule,
     ReactiveFormsModule,
   ],

@@ -4,11 +4,9 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
-import { CoreComponent } from './core/core.component';
 
 import { AdminApiService } from './shared/services/api/admin-api.service';
 import { ApiService } from './shared/services/api/api.service';
@@ -22,13 +20,11 @@ import { PamInventoryService } from './shared/services/pam/pam-inventory.service
 @NgModule({
   declarations: [
     AppComponent,
-    CoreComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    CoreModule,
     SharedModule,
     AppRoutingModule,
   ],

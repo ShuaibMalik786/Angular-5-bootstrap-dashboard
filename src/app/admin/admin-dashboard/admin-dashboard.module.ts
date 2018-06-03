@@ -2,9 +2,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
-import { NguiAutoCompleteModule } from '@ngui/auto-complete';
 import { NgSelect2Module } from 'ng-select2';
 import { ToastModule } from 'ng2-toastr/ng2-toastr';
+import { NgDatepickerModule } from 'ng2-datepicker';
 
 import { AdminDashboardRoutingModule } from './admin-dashboard-routing.module';
 import { SharedModule } from '../../shared/shared.module';
@@ -59,8 +59,8 @@ import { UiComponentsComponent } from './ui-components/ui-components.component';
     AdminDashboardRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    NguiAutoCompleteModule,
     NgSelect2Module,
+    NgDatepickerModule,
     ToastModule.forRoot()
   ]
 })

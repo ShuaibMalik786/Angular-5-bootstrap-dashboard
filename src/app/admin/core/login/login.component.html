@@ -1,41 +1,38 @@
-<div class="login-form admin-login">
-  <div class="login-form__header">
-    <div class="icon-circle">
-      <i class="fa fa-user fa-2x center-it"></i>
+<section class="content">
+    <div class="login-form admin-login">
+        <div class="login-form__header">
+            <div class="icon-circle">
+                <i class="fa fa-user fa-2x center-it"></i>
+            </div>
+            <label> Login</label>
+        </div>
+        <div class="login-form__body">
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Enter Email">
+            </div>
+
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Enter Password">
+            </div>
+
+            <button class="btn btn-hl full-width">Login</button>
+
+            <div class="row">
+                <div class="col-xs-6">
+                    <input type="checkbox" id="login-check">
+                    <label for="login-check"> Remember me</label>
+                </div>
+                <div class="col-xs-6 text-right">
+                    <a href="">
+                        Forgot Password?
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="login-form__footer hide">
+            <p>Not a member?
+                <a href="">Create Account</a>
+            </p>
+        </div>
     </div>
-    <label>Admin Login</label>
-  </div>
-  <div class="login-form__body">
-    <form [formGroup]="form.getForm()" (ngSubmit)="onFormSubmit()">
-
-      <div class="form-group" [ngClass]="form.hasError('email') ? 'has-error': ''">
-        <input type="email" formControlName="email" class="form-control" placeholder="Enter Email">
-        <span class="help-block" *ngIf="form.hasError('email')">
-          {{ form.getError('email') }}
-        </span>
-      </div>
-
-      <div class="form-group" [ngClass]="form.hasError('password') ? 'has-error': ''">
-        <input type="password" formControlName="password" class="form-control" placeholder="Enter Password">
-        <span class="help-block" *ngIf="form.hasError('password')">
-          {{ form.getError('password') }}
-        </span>
-      </div>
-
-      <button #submit type="submit" class="btn btn-hl full-width input-md">Login</button>
-
-      <div class="row">
-        <div class="col-xs-6">
-          <input class="hl-input-checkbox" id="remember" formControlName="remember" type="checkbox" value="1">
-          <label class="checkbox-name-in" for="remember"> Remember me</label>
-        </div>
-        <div class="col-xs-6 text-right">
-          <a routerLink="/corporates/forgot-password">
-            Forgot Password ?
-          </a>
-        </div>
-      </div>
-
-    </form>
-  </div>
-</div>
+</section>
