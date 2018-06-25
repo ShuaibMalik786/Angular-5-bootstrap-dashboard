@@ -19,6 +19,7 @@ import { IconsComponent } from './icons/icons.component';
 import { NotieComponent } from './notie/notie.component';
 import { UiElementsComponent } from './ui-elements/ui-elements.component';
 import { ToastrComponent } from './toastr/toastr.component';
+import { MapComponent } from './map/map.component';
 
 const siteName = DefaultConstant.SITE_NAME;
 import { SweetAlertComponent } from './sweet-alert/sweet-alert.component';
@@ -49,6 +50,7 @@ const routes: Routes = [
       { path: 'users/add', component: UsersAddComponent },
       { path: 'users/view', component: UsersViewComponent },
       { path: 'users/edit', component: UsersEditComponent },
+      { path: 'map', component: MapComponent },
     ]
   },
 ];

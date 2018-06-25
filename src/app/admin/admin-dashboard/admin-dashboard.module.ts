@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 
 import { NgSelect2Module } from 'ng-select2';
 import { ToastModule } from 'ng2-toastr/ng2-toastr';
-import { NgDatepickerModule } from 'ng2-datepicker';
 
 import { AdminDashboardRoutingModule } from './admin-dashboard-routing.module';
 import { SharedModule } from '../../shared/shared.module';
@@ -29,6 +28,7 @@ import { UiElementsComponent } from './ui-elements/ui-elements.component';
 import { SweetAlertComponent } from './sweet-alert/sweet-alert.component';
 import { ToastrComponent } from './toastr/toastr.component';
 import { UiComponentsComponent } from './ui-components/ui-components.component';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +51,8 @@ import { UiComponentsComponent } from './ui-components/ui-components.component';
     UiElementsComponent,
     SweetAlertComponent,
     ToastrComponent,
-    UiComponentsComponent
+    UiComponentsComponent,
+    MapComponent
   ],
   imports: [
     CommonModule,
@@ -60,7 +61,6 @@ import { UiComponentsComponent } from './ui-components/ui-components.component';
     FormsModule,
     ReactiveFormsModule,
     NgSelect2Module,
-    NgDatepickerModule,
     ToastModule.forRoot()
   ]
 })
